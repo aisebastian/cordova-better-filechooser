@@ -53,7 +53,7 @@ public class CustomFileChooser extends CordovaPlugin {
         intent.putExtra(Intent.EXTRA_TITLE, name);
 
         Intent chooser = Intent.createChooser(intent, "Select File");
-        cordova.startActivityForResult(this, chooser, CREATE_FILE_REQUEST);
+        cordova.startActivityForResult(this, chooser, PICK_FILE_REQUEST);
 
         PluginResult pluginResult = new PluginResult(PluginResult.Status.NO_RESULT);
         pluginResult.setKeepCallback(true);
