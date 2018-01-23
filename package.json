@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aisebastian/cordova-custom-filechooser.git"
+    "url": "git+https://github.com/aisebastian/cordova-better-filechooser.git"
   },
   "author": "Sebastian Irimia, based on work by Enrique Garcia",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/aisebastian/cordova-custom-filechooser/issues"
+    "url": "https://github.com/aisebastian/cordova-better-filechooser/issues"
   },
-  "homepage": "https://github.com/aisebastian/cordova-custom-filechooser",
+  "homepage": "https://github.com/aisebastian/cordova-better-filechooser",
   "cordova": {
     "id": "cordova-plugin-better-filechooser",
     "platforms": [
@@ -23,6 +23,6 @@
     ]
   },
   "keywords": [
-    "custom filechooser"
+    "custom filechooser, create file, pick file, pick file to create"
   ]
 }
