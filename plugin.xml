@@ -9,7 +9,7 @@
         <engine name="cordova" version=">=2.8.0" />
     </engines>
 
-    <name>Custom File Chooser</name>
+    <name>Better File Chooser</name>
 
     <js-module src="www/customFileChooser.js" name="CustomFileChooser">
         <clobbers target="customFileChooser" />
