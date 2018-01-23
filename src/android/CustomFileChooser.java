@@ -1,4 +1,4 @@
-package com.custom.cordova;
+package com.better.cordova;
 
 import android.app.Activity;
 import android.content.Intent;
