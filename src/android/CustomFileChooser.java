@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.util.Log;
+import java.io.File;
 
 import org.apache.cordova.CordovaArgs;
 import org.apache.cordova.CallbackContext;
