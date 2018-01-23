@@ -1,23 +1,23 @@
 {
-  "name": "cordova-plugin-custom-filechooser",
+  "name": "cordova-plugin-better-filechooser",
   "version": "1.0.3",
-  "description": "Cordova Custom FileChooser Plugin",
+  "description": "Cordova Better FileChooser Plugin, based on custom file chooser: https://github.com/EnriqueGL/cordova-custom-filechooser",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EnriqueGL/cordova-custom-filechooser.git"
+    "url": "git+https://github.com/aisebastian/cordova-custom-filechooser.git"
   },
-  "author": "Enrique Garcia",
+  "author": "Sebastian Irimia, based on work by Enrique Garcia",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/EnriqueGL/cordova-custom-filechooser/issues"
+    "url": "https://github.com/aisebastian/cordova-custom-filechooser/issues"
   },
-  "homepage": "https://github.com/EnriqueGL/cordova-custom-filechooser",
+  "homepage": "https://github.com/aisebastian/cordova-custom-filechooser",
   "cordova": {
-    "id": "cordova-plugin-custom-filechooser",
+    "id": "cordova-plugin-better-filechooser",
     "platforms": [
       "android"
     ]

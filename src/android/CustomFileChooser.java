@@ -15,6 +15,8 @@ public class CustomFileChooser extends CordovaPlugin {
 
     private static final String TAG = "CustomFileChooser";
     private static final String ACTION_OPEN = "open";
+    private static final String ACTION_CREATE = "create";
+    private static final String ACTION_GET_DB_PATH = "getDatabasePath";
     private static final int PICK_FILE_REQUEST = 1;
     CallbackContext callback;
 
@@ -25,8 +27,38 @@ public class CustomFileChooser extends CordovaPlugin {
             chooseFile(callbackContext, args.getString(0));
             return true;
         }
+        if (action.equals(ACTION_CREATE)) {
+            createFile(callbackContext, args.getString(0), args.getString(1));
+            return true;
+        }
+        if (action.equals(ACTION_GET_DB_PATH)) {
+            getDbPath(callbackContext, args.getString(0));
+            return true;
+        }
 
         return false;
+    }
+
+    public void getDbPath(CallbackContext callbackContext,String name) {
+        File source = cordova.getActivity().getDatabasePath(name);
+        callbackContext.success("file://" + source.getAbsolutePath());
+    }
+	
+    public void createFile(CallbackContext callbackContext,String type, String name) {
+
+        // type and title should be configurable
+        Intent intent = new Intent(Intent.ACTION_CREATE_DOCUMENT);
+        intent.setType(type);
+        intent.addCategory(Intent.CATEGORY_OPENABLE);
+        intent.putExtra(Intent.EXTRA_TITLE, name);
+
+        Intent chooser = Intent.createChooser(intent, "Select File");
+        cordova.startActivityForResult(this, chooser, CREATE_FILE_REQUEST);
+
+        PluginResult pluginResult = new PluginResult(PluginResult.Status.NO_RESULT);
+        pluginResult.setKeepCallback(true);
+        callback = callbackContext;
+        callbackContext.sendPluginResult(pluginResult);
     }
 
     public void chooseFile(CallbackContext callbackContext,String type) {

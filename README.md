@@ -1,18 +1,29 @@
-# cordova custom filechooser
-plugin para poder seleccionar archivos desde android, personalizando que tipo de archivo vas a buscar.
- 
-Requiere Cordova >= 2.8.0 
+# cordova better filechooser
 
-Instalar con Cordova CLI
+Plugin to select existing file or create a new one, based on 
+https://github.com/EnriqueGL/cordova-custom-filechooser.git
+
+Require Cordova >= 2.8.0 
+
+Install with Cordova CLI
 	
-	$ cordova plugin add https://github.com/EnriqueGL/cordova-custom-filechooser.git
+	$ cordova plugin add https://github.com/aisebastian/cordova-better-filechooser.git
   
 API
 
-	customFileChooser.open(type ,successCallback, failureCallback); 
+	customFileChooser.open(type, successCallback, failureCallback); 
   type: string
   
   	customFileChooser.open('application/pdf, image/png',function (uri){
+      		console.log(uri)
+    	}, function(err){
+      		console.log(err);
+    	});
+		
+	customFileChooser.create(type, name, successCallback, failureCallback); 
+  type: string
+  
+  	customFileChooser.create('image/png', 'drawable.png', function (uri){
       		console.log(uri)
     	}, function(err){
       		console.log(err);
@@ -47,8 +58,4 @@ Types:
 	.apk -> application/vnd.android.package-archive
 
 
-## Donacion
-
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CSA7RBWMGH26G)
-
-
+	
