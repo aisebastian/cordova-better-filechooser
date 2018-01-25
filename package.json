@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aisebastian/cordova-better-filechooser.git"
+    "url": "https://github.com/aisebastian/cordova-better-filechooser.git"
   },
   "author": "Sebastian Irimia, based on work by Enrique Garcia",
   "license": "ISC",
